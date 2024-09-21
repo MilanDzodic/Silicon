@@ -7,7 +7,7 @@
     --color-white: #fff;
 
     --container-padding: 1rem;
-    --transition-time: all 0.2rem;
+    --transition-time: all 0.2s;
 }
 
 
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: "Manrope", system-ui;
+    font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -33,4 +33,31 @@ a {
 a:hover {
     color: var(--color-primary);
     text-decoration: underline;
+}
+
+
+.container {
+    display: flex;
+    gap: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-signin {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.btn-signin:hover {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    text-decoration: none;
 }
