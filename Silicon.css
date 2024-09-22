@@ -208,7 +208,7 @@ footer {
     display: none;
     padding: 2rem 0;
             
-    .container-brands {
+    .container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -228,7 +228,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .container {
+    .container{
         width: 720px;
     }
 
