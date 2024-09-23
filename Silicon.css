@@ -227,6 +227,50 @@ footer {
     align-items: center;
 }
 
+#hero {
+    .container {
+
+    }
+
+    .headline {
+        text-align: center;
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+        }
+    }
+
+    .content {
+        text-align: center;
+        p {
+
+        }
+        
+        .buttons {
+
+        }
+
+        .discover-more {
+
+        }
+    }
+
+
+    .images {
+        display: none;
+
+        .img-back {
+
+        }
+
+        .img-front {
+
+        }
+    }
+}
+
+
 @media (min-width: 768px) {
     .container{
         width: 720px;
