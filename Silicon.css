@@ -354,13 +354,10 @@ header .container {
 }
 
 #app-features {
-    
+    margin-top: 3rem;
+
     .containy {
         text-align: center;
-
-        /* @media (min-width: 786px) {
-            padding: 8px;
-        } */
     }
 
     .headline {
@@ -394,17 +391,44 @@ header .container {
                              "top-img top-text";
 
         @media (min-width: 768px) {
-            grid-template-columns: 1fr;
+            a
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-areas: "headline headline headline headline"
                                  "first-text first-text first-text first-text"
                                  "easy-img easy data-img data"
                                  "easy-img easy-text data-img data-text"
                                  "cost-img cost support-img support"
                                  "cost-img cost-text support-img support-text"
-                                 /* "regular-img regulartop-img top"
-                                 "regular-img regular-text top-img top-text" */
+                                 "regular-img regular top-img top"
+                                 "regular-img regular-text top-img top-text";
                                  
         }
+
+        @media (min-width: 1400px) {
+            
+            #phone {
+                display: block;
+            }
+            
+            text-align: left;
+
+            grid-template-columns: 1fr;
+            grid-template-areas: "phone headline headline headline headline"
+                                 "phone first-text first-text first-text first-text"
+                                 "phone easy-img easy data-img data"
+                                 "phone easy-img easy-text data-img data-text"
+                                 "phone cost-img cost support-img support"
+                                 "phone cost-img cost-text support-img support-text"
+                                 "phone regular-img regular top-img top"
+                                 "phone regular-img regular-text top-img top-text";
+                                
+        }    
+    }
+
+    #phone {
+        display: none;
+        grid-area: phone;
+        margin-right: 10rem;
     }
 
     #headline {
@@ -499,6 +523,10 @@ header .container {
     .second-text {
         margin-top: -0.8rem;
         text-align: left;
+
+        @media (min-width: 1400px) {
+            margin-top: -4rem;
+        }
     }
 
     .img-features {
@@ -506,10 +534,16 @@ header .container {
         @media (min-width: 768px) {
             margin-top: -1.5rem;
         }
+
+        @media (min-width: 1400px) {
+            margin-top: -20px;
+            margin-right: -20px;
+        }
     }
 }
 
 #brands {
+    margin-top: 2rem;
     display: none;
     padding: 2rem 0;
             
@@ -573,6 +607,7 @@ footer {
 
     #brands {
         display: block;
+        padding-bottom: 1rem;
     }
 
     #brand-1, #brand-2 {
