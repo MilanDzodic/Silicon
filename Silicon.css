@@ -226,7 +226,7 @@ header .container {
 #hero {
     background: rgb(99,102,241);
     background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 
     overflow: hidden;
 
@@ -277,10 +277,6 @@ header .container {
         grid-area: content;
         text-align: center;
 
-        @media (min-width: 768px) {
-            text-align: center;
-        }
-
         p {
             font-size: 18px;
             margin-bottom: 3rem;
@@ -311,9 +307,8 @@ header .container {
             }
 
             @media (min-width: 1400px) {
-                margin-top: 8px;
+                margin-top: 30px;
             }
-
         }
     }
 
@@ -330,33 +325,159 @@ header .container {
         .img-back {
             position: absolute;
             z-index: -10;
-            bottom: 0;
+            bottom: -220px;
             right: 100px;
             width: 70%;
             height: auto;
 
             @media (min-width: 1400px) {
-                width: auto;
-                bottom: -100px;
-                right: 22px;
+                width: 30%;
+                bottom: -268px;
+                right: 90px;
             }
-
         }
 
         .img-front {
             position: absolute;
             z-index: -5;
-            bottom: 0;
+            bottom: -205px;
             right: 0;
             width: 70%;
             height: auto;
         
-
             @media (min-width: 1400px) {
-                width: auto;
-                bottom: -100px;
-            
+                width: 30%;
+                bottom: -250px;
             }
+        }
+    }
+}
+
+#app-features {
+
+    
+    .containy {
+        display: grid;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .headline {
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+        }
+    }
+
+    .first-text {
+        font-size: 18px;
+    }
+
+    .container {
+        display: grid;
+        /* grid-auto-rows: minmax(50px, auto); */
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        place-items: left;
+        grid-template-areas: "easy-img easy"
+                             "easy-img easy-text"
+                             "data-img data"
+                             "data-img data-text"
+                             "cost-img cost"
+                             "cost-img cost-text"
+                             "support-img support"
+                             "support-img support-text"
+                             "regular-img regular"
+                             "regular-img regular-text"
+                             "top-img top"
+                             "top-img top-text";
+
+    }
+
+    #easy-img {
+        grid-area: easy-img;
+    }
+
+    .easy {
+        grid-area: easy;
+    }
+
+    .easy-text {
+        grid-area: easy-text;
+    }
+
+    #data-img {
+        grid-area: data-img;
+    }
+    
+    .data {
+        grid-area: data;
+    }
+
+    .data-text{
+        grid-area: data-text;
+    }
+
+    #cost-img {
+        grid-area: cost-img;
+    }
+
+    .cost {
+        grid-area: cost;
+    }
+
+    .cost-text {
+        grid-area: cost-text;
+    }
+
+    #support-img {
+        grid-area: support-img;
+    }
+    
+    .support {
+        grid-area: support;
+    }
+
+    .support-text{
+        grid-area: support-text;
+    }
+
+    #regular-img {
+        grid-area: regular-img;
+    }
+
+    .regular {
+        grid-area: regular;
+    }
+
+    .regular-text {
+        grid-area: regular-text;
+    }
+
+    #top-img {
+        grid-area: top-img;
+    }
+    
+    .top {
+        grid-area: top;
+    }
+
+    .top-text{
+        grid-area: top-text;
+    }
+    
+    .second-text {
+        
+    }
+    .img-features {
+       
+    }
+
+    .sub-headline {
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
         }
     }
 }
@@ -371,7 +492,6 @@ header .container {
         align-items: center;
         gap: 1rem;
     }
-
 }
 
 .brand-box {
