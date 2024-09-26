@@ -354,13 +354,13 @@ header .container {
 }
 
 #app-features {
-
     
     .containy {
-        display: grid;
         text-align: center;
-        gap: 1rem;
-        margin-top: 1rem;
+
+        /* @media (min-width: 786px) {
+            padding: 8px;
+        } */
     }
 
     .headline {
@@ -370,17 +370,17 @@ header .container {
         }
     }
 
-    .first-text {
+    .first-text {       
         font-size: 18px;
     }
 
     .container {
         display: grid;
-        /* grid-auto-rows: minmax(50px, auto); */
         gap: 1rem;
         grid-template-columns: 1fr;
-        place-items: left;
-        grid-template-areas: "easy-img easy"
+        grid-template-areas: "headline headline"
+                             "first-text first-text"
+                             "easy-img easy"
                              "easy-img easy-text"
                              "data-img data"
                              "data-img data-text"
@@ -393,6 +393,26 @@ header .container {
                              "top-img top"
                              "top-img top-text";
 
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "headline headline headline headline"
+                                 "first-text first-text first-text first-text"
+                                 "easy-img easy data-img data"
+                                 "easy-img easy-text data-img data-text"
+                                 "cost-img cost support-img support"
+                                 "cost-img cost-text support-img support-text"
+                                 /* "regular-img regulartop-img top"
+                                 "regular-img regular-text top-img top-text" */
+                                 
+        }
+    }
+
+    #headline {
+        grid-area: headline;
+    }
+
+    #first-text {
+        grid-area: first-text;
     }
 
     #easy-img {
@@ -466,18 +486,25 @@ header .container {
     .top-text{
         grid-area: top-text;
     }
-    
-    .second-text {
-        
-    }
-    .img-features {
-       
-    }
 
     .sub-headline {
         h2 {
             font-size: 20px;
             font-weight: 800;
+        }
+
+        text-align: left;
+    }
+
+    .second-text {
+        margin-top: -0.8rem;
+        text-align: left;
+    }
+
+    .img-features {
+
+        @media (min-width: 768px) {
+            margin-top: -1.5rem;
         }
     }
 }
@@ -525,7 +552,7 @@ footer {
 
 @media (min-width: 768px) {
     .container{
-        width: 720px;
+        width: 735px;
     }
 
     .btn-toggle-switch .label {
