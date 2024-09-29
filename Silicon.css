@@ -354,16 +354,24 @@ header .container {
 }
 
 #app-features {
-    margin-top: 3rem;
+    margin: 3rem 0;
 
     .containy {
         text-align: center;
     }
 
     .headline {
-        h1 {
-            font-size: 28px;
-            font-weight: 800;
+        text-align: center;        
+        font-size: 28px;
+        font-weight: 800;
+
+        @media (min-width: 768px) {
+            font-size: 33.5px;
+        }
+
+        @media (min-width: 1400px) {
+            font-size: 40px;
+            margin: -2rem 0;
         }
     }
 
@@ -538,6 +546,114 @@ header .container {
         @media (min-width: 1400px) {
             margin-top: -20px;
             margin-right: -20px;
+        }
+    }
+}
+
+#how-work {
+    background-color: #F3F6FF;
+    
+    .container {
+        display: grid;
+        place-items: center;
+        gap: 2rem;
+    }
+
+    .how-does-img {
+        display: flex;
+        
+        @media (min-width: 1400px) {
+            gap: 5rem;
+        }
+
+    }
+
+    .headline {
+        margin-top: 3rem;
+        font-size: 28px;
+        font-weight: 800;
+         
+        @media (min-width: 768px) {
+            font-size: 33.5px;
+        }
+
+        @media (min-width: 1400px) {
+            font-size: 40px;
+        }
+    }
+
+    .text {
+        text-align: center;
+        margin: 0 2rem;
+        
+        @media (min-width: 768px) {
+            margin: 0 8rem;
+        }
+ 
+        
+        @media (min-width: 1400px) {
+            display: none;
+        }
+    }
+    
+    .text-desktop {
+        display: none;
+        text-align: center;
+
+        @media (min-width: 1400px) {
+            display: block;
+            width: 650px;
+        }
+    }
+
+    .sub-headline {
+        font-size: 22px;
+        font-weight: 800;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .sub-headline-tablet {
+        display: none;
+        text-align: center;
+        font-size: 23px;
+        font-weight: 800;
+
+        @media (min-width: 768px) {
+            display: block;
+            margin: 0 10rem;
+        }
+
+        @media (min-width: 1400px) {
+            display: none;
+        }
+    }
+
+    .sub-headline-desktop {
+        display: none;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 800;
+
+        @media (min-width: 1400px) {
+            display: block  ;
+        }
+    }
+
+
+    img {
+        height: 411px;
+        width: 203px;
+    }
+
+    #phone-1, #phone-3 {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
         }
     }
 }
