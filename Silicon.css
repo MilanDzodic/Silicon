@@ -353,6 +353,29 @@ header .container {
     }
 }
 
+#brands {
+    margin-top: 2rem;
+    display: none;
+    padding: 2rem 0;
+            
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.brand-box {
+    border: 1px solid var(--color-border-gray);
+    border-radius: 0.5rem;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #app-features {
     margin: 3rem 0;
 
@@ -552,6 +575,7 @@ header .container {
 
 #how-work {
     background-color: #F3F6FF;
+    padding: 5rem 0;
     
     .container {
         display: grid;
@@ -569,7 +593,6 @@ header .container {
     }
 
     .headline {
-        margin-top: 3rem;
         font-size: 28px;
         font-weight: 800;
          
@@ -658,27 +681,130 @@ header .container {
     }
 }
 
-#brands {
-    margin-top: 2rem;
+#make-your-money {
     display: none;
-    padding: 2rem 0;
-            
-    .container {
+    padding: 10rem 0;
+
+    @media (min-width: 1400px) {
+        display: block;
+    }
+
+    .container  {
+        display: grid;
+        gap: 5rem;
+
+    grid-template-areas: "content-1 images-2"
+                         "images-1 content-2" ;
+
+    }
+
+    .headline {
+        font-size: 32px;
+        font-weight: 800;
+        width: 500px;
+    }
+
+    .content-1, .images-2 {
+        margin-bottom: 10rem;
+    }
+
+    .content-1 {
+        grid-area: content-1;
+        display: grid;
+        gap: 2rem;
+        
+       .containy {
+            gap: 2rem;
+
+            .flex {
+                display: flex;
+                margin: 1rem 0;
+                gap: 1rem;
+            }
+        }
+    }
+
+    .content-2 {
+        grid-area: content-2;
+        display: grid;
+        gap: 2rem;
+
+        .containz {
+            display: grid;
+
+            .flex {
+                display: flex;
+                margin: 1rem 0;
+                gap: 305px;
+            }
+
+            .flexy {
+                display: flex;
+                
+            }
+        }
+    }
+    
+    .images-1 {
+        grid-area: images-1;
+        position: relative;
+    
+        #inner-first {
+            position: absolute;
+            z-index: -10;
+            bottom: -220px;
+            width: 80%;
+            height: auto;
+        }
+
+        #outer-first {
+            position: absolute;
+            z-index: -5;
+            bottom: -190px;
+            right: 32px;
+            width: 70%;
+            height: auto;
+        }
+    }
+
+    .images-2 {
+        grid-area: images-2;
+        position: relative;
+
+        #inner-second {
+            position: absolute;
+            z-index: -10;
+            bottom: -220px;
+            width: 70%;
+            height: auto;
+        }
+
+        #outer-second {
+            position: absolute;
+            z-index: -5;
+            bottom: -290px;
+            right: 140px;
+            width: 45%;
+            height: auto;
+        }
+    }
+
+    .button {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        gap: 0.5rem;
+        padding: 15px 20px;
+        width: 150px;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        text-decoration: none;
     }
-}
-
-.brand-box {
-    border: 1px solid var(--color-border-gray);
-    border-radius: 0.5rem;
-    height: 100px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+       
 }
 
 footer {
