@@ -893,7 +893,11 @@ header .container {
 }
 
 #faq {
-    margin-top: 5rem;
+    margin-top: 4rem;
+
+    @media (min-width: 1400px) {
+        margin-top: 6rem;
+    }
 
     .container {
         display: grid;
@@ -942,20 +946,20 @@ header .container {
     .contain-tablet {
         display: grid;
         gap: 1rem;
+        place-content: center;
+        justify-content: space-evenly;
 
-        .contain-phone, .contain-chat {
+        .contain-both {
             display: none;
-        }
-
-        @media (min-width: 768px){
-            display: grid;
-            gap: 1rem;
-            place-content: center;
-            justify-content: space-evenly;
         }
 
         @media (min-width: 1400px) {
             gap: 2rem;
+
+            .contain-both {
+                display: flex;
+                gap: 1rem;
+            }
 
             .contain-phone, .contain-chat {
                 display: grid;
@@ -963,11 +967,6 @@ header .container {
                 padding: 1rem;
                 border: 1px solid #E2E5F1;
                 border-radius: 0.5em;
-            }
-
-            .contain-both {
-                display: flex;
-                gap: 1rem;
             }
 
             .contain-phone{
@@ -987,9 +986,43 @@ header .container {
     .contain-desktop {
         display: grid;
         gap: 1rem;
+        
+        .contain-both {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .contain-both {
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
+            }
+
+            .contain-phone, .contain-chat {
+                display: grid;
+                gap: 1rem;
+                padding: 2rem 10rem 2rem 1rem;
+                border: 1px solid #E2E5F1;
+                border-radius: 0.5em;
+            }
+
+            .contain-phone{
+                .phone {
+                    color: var(--color-primary);
+                }
+            }
+
+            .contain-chat {
+                .chat {
+                    color:var(--color-success);
+                }
+            }
+        }
 
         @media (min-width: 1400px) {
-            
+            .contain-both {
+                display: none;
+            }
         }
 
     .question {
@@ -1153,6 +1186,7 @@ header .container {
     }
 }
 
+#
 
 footer {
     font-size: 14px;
