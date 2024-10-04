@@ -995,6 +995,7 @@ header .container {
             .contain-both {
                 display: flex;
                 gap: 1rem;
+                margin-top: 2rem;
                 justify-content: space-between;
             }
 
@@ -1188,7 +1189,12 @@ header .container {
 }
 
 #subscribe {
-    margin: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+
+    @media (min-width: 768px) {
+        margin-top: 1rem;
+    }
 
     .container {
         display: grid;
@@ -1198,6 +1204,10 @@ header .container {
     .contact {
         display: grid;
         place-items: center;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
 
     .btn {
@@ -1222,6 +1232,12 @@ header .container {
         padding: 3rem 1rem 2rem 1rem;
         border-radius: 0.5rem;
         background-color: var(--color-gray-100);
+
+        @media (min-width: 768px) {
+            display: flex;
+            padding: 4rem 1.5rem;
+            align-items: center;
+        }
     }
 
     .notif {
