@@ -54,6 +54,10 @@ body {
     }
 }
 
+main {
+    margin-bottom: -4rem;
+}
+
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -893,10 +897,10 @@ header .container {
 }
 
 #faq {
-    margin-top: 4rem;
+    margin: 1rem 0;
 
     @media (min-width: 1400px) {
-        margin-top: 6rem;
+        margin: 5rem 0;
     }
 
     .container {
