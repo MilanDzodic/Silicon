@@ -1192,13 +1192,17 @@ header .container {
     margin-top: 3rem;
     margin-bottom: 5rem;
 
+    .contact, .sub {
+        
+    }
+
     @media (min-width: 768px) {
         margin-top: 1rem;
     }
 
     .container {
         display: grid;
-
+        gap: 3rem;
     }
 
     .contact {
@@ -1218,8 +1222,7 @@ header .container {
         border: none;
         border-radius: 8px;
         gap: 0.5rem;
-        padding: 15px 20px;
-        width: 150px;
+        padding: 1rem 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1229,7 +1232,7 @@ header .container {
     .sub {
         display: grid;
         gap: 2rem;
-        padding: 3rem 1rem 2rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
         border-radius: 0.5rem;
         background-color: var(--color-gray-100);
 
@@ -1238,37 +1241,67 @@ header .container {
             padding: 4rem 1.5rem;
             align-items: center;
         }
+
+        @media (min-width: 1400px) {
+            gap: 10rem;
+            padding: 5rem;
+        }
     }
 
     .notif {
         display: flex;
         gap: 1.5rem;
         align-items: center;
+    
 
         .sub-text {
             font-size: 21.6px;
             font-weight: 800;
+
+            @media (min-width: 1400px) {
+                display: none;
+            }
+        }
+
+        .sub-texty {
+            display: none;
+            font-size: 21.6px;
+            font-weight: 800;
+
+            @media (min-width: 1400px) {
+                display: block;
+            }
         }
     }
 
     .your-email {
         display: flex;
-        position: relative;
-
-        .icon {
-            position: absolute;
-            top: 25%;
-            padding-left: 0.5rem;
-        }
+        justify-content: center;
 
         .email {
+            width: 184px;
             border: 1px solid #E2E5F1;
             border-radius: 0.5rem 0 0 0.5rem;
-            padding-left: 2rem;
+            padding-left: 2.2rem;
+            background-image: url('./Images/Subscribe\ mail\ ikon.svg');
+            background-repeat: no-repeat;
+            background-position: 10px;
+
+            @media (min-width: 768px) {
+                width: 220px;
+            }
+
+            @media (min-width: 1400px) {
+                width: 300px;
+            }
+
         }
        
         .btn {
             border-radius: 0 0.5rem 0.5rem 0;
+            font-size: 16px;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
     }
 }
